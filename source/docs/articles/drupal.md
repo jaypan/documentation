@@ -1,13 +1,13 @@
 ---
 use:
-  - d8
+  - eight
   - drupal
 title: Drupal Articles
 layout: article
 landing_subdirs: true
 ---
 ## [Drupal 8](/docs/articles/drupal/8)
-{% for article in data.d8 %}
+{% for article in data.eight %}
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 {% endfor %}
 ## Drupal

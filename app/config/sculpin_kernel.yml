@@ -26,19 +26,24 @@ sculpin_content_types:
             - category
             - authors
         permalink: pretty
-    d8:
-        type: path
-        path: docs/article/drupal/8
-        enabled: true
-        permalink: pretty
     drupal:
         type: path
-        path: docs/article/drupal
+        path: docs/articles/drupal
+        enabled: true
+        permalink: pretty
+    eight:
+        type: path
+        path: docs/articles/drupal/8
         enabled: true
         permalink: pretty
     local:
         type: path
         path: docs/articles/local
+        enabled: true
+        permalink: pretty
+    organizations:
+        type: path
+        path: docs/articles/organizations
         enabled: true
         permalink: pretty
     sites:
@@ -104,5 +109,15 @@ sculpin_content_types:
     varnish:
         type: path
         path: docs/articles/sites/varnish
+        enabled: true
+        permalink: pretty
+    users:
+        type: path
+        path: docs/articles/users
+        enabled: true
+        permalink: pretty
+    wordpress:
+        type: path
+        path: docs/articles/wordpress
         enabled: true
         permalink: pretty
