@@ -11,28 +11,28 @@ layout: article
 landing_subdirs: true
 ---
 
-## Drupal
-{% for article in data.drupal %}
+## Sites
+{% for article in data.sites %}
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 {% endfor %}
 ## Local Development
 {% for article in data.local %}
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 {% endfor %}
-## Organizations
-{% for article in data.organizations %}
+## Drupal
+{% for article in data.drupal %}
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 {% endfor %}
-## Sites
-{% for article in data.sites %}
+## WordPress
+{% for article in data.wordpress %}
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 {% endfor %}
 ## Users
 {% for article in data.users %}
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 {% endfor %}
-## WordPress
-{% for article in data.wordpress %}
+## Organizations
+{% for article in data.organizations %}
 <a href="{{ article.url }}">{{ article.title }}</a><br>
 {% endfor %}
 ## Miscellaneous
