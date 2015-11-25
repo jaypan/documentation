@@ -36,12 +36,12 @@ All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, a
 ### Sites
 
 The Sites list shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
-[Learn More](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/#add-sites-to-your-organization).
+[Learn More](/docs/articles/organizations/dashboard/#add-sites-to-your-organization).
 
 ### People
 
 View all of your collaborators, filter them by role, manage their roles, and add new users to your organization.
-[Learn how to add users to the organization](/docs/articles/organizations/managing-sites-and-teams-with-the-organization-dashboard/#add-users-to-your-organization).
+[Learn how to add users to the organization](/docs/articles/organizations/dashboard/#add-users-to-your-organization).
 
 ### Upstreams
 
