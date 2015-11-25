@@ -15,7 +15,7 @@ use:
   - sites
 title: Site Articles
 layout: article
-landing: true
+sites: true
 ---
 
 ## [Backups](/docs/articles/sites/backups)
@@ -88,7 +88,7 @@ landing: true
 
 {% endfor %}
 
-## Miscellaneous Site Related Articles
+## Miscellaneous
 [All About Application Containers](/docs/articles/sites/all-about-application-containers)
 
 [Apache Solr on Pantheon](/docs/articles/sites/apache-solr)
