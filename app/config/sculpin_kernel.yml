@@ -26,12 +26,16 @@ sculpin_content_types:
             - category
             - authors
         permalink: pretty
-    8:
+    d8:
         type: path
         path: docs/article/drupal/8
         enabled: true
         permalink: pretty
-
+    drupal:
+        type: path
+        path: docs/article/drupal
+        enabled: true
+        permalink: pretty
     local:
         type: path
         path: docs/articles/local

@@ -1,46 +1,32 @@
 ---
-title: Drupal
-description: Drupal is an open source content management platform powering millions of websites and applications.
-category: drupal
-keywords: drupal, sites, pantheon, upstream
+use:
+  - d8
+  - drupal
+title: Drupal Articles
+layout: article
+landing_subdirs: true
 ---
-[Drupal](https://www.drupal.org) is an open source content management platform powering millions of websites and applications. It’s built, used, and supported by an active and diverse community of people around the world.
-
-## Drupal 8
-Pantheon runs an unmodified core version of Drupal 8. When you create a new Drupal 8 site, it clones the [drops-8](https://github.com/pantheon-systems/drops-8) repository and sets it as the site's upstream, so you can [apply core updates](/docs/articles/sites/code/applying-upstream-updates/) with a single click.
-
-## Drupal 7
-Pantheon runs an optimized version of Drupal, based on [Pressflow](https://github.com/pressflow/7), with an additional [Pantheon API module](/docs/articles/sites/code/what-is-the-pantheon_api-module/). When you create a new Drupal 7 site, it clones the [drops-7](https://github.com/pantheon-systems/drops-7) repository and sets it as the site's upstream, so you can [apply core updates](/docs/articles/sites/code/applying-upstream-updates/) with a single click. The import process for migrating an existing Drupal site replaces core with drops-7.
-
-## Get Started
-[Migrate an existing Drupal site](/docs/articles/sites/migrate) or [launch a new one](/docs/articles/getting-started/) using the Pantheon Dashboard.
-
-## Clone a Drupal Site From a Backup
-See [Cloning an Existing Site from a Dashboard Backup](/docs/articles/sites/backups/cloning-an-existing-site-from-a-dashboard-backup/).
-
-## Major Version Upgrades
-The best practice for doing a major Drupal revision upgrade (e.g. version 6 to version 7) is to start a new site. Even the simplest of upgrades require their own QA and deployment process, and trying to do an upgrade on an existing site is not a recipe for success.
-
-Also, Pantheon needs to track the proper upstream for your site to deliver core updates. By starting a new site for the upgrade, you ensure that future core updates are available via the Dashboard. [Learn more](/docs/articles/drupal/major-version-drupal-upgrades/).
-
-## Updating Modules
-See [Updating Modules Through Drupal](/docs/articles/drupal/updating-modules-through-drupal/).
-
-## Apache Solr
-[Apache Solr](/docs/articles/sites/apache-solr/) is an open source system for indexing and searching website content. We manage a cluster of fast Solr index servers that communicate with your site via these popular Drupal modules:
-
-​[Apache Solr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-3.x  
-[Search API Solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
-
-For most sites, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.
-
-## Launch Check
-
-Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. Go live with confidence using [Launch Check for Drupal](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis/).
-
-## See Also
-- [Caching in Drupal Modules](/docs/articles/drupal/caching-in-drupal-modules/)
-- [Configuring Settings.php](/docs/articles/drupal/configuring-settings-php/)
-- [Cron for Drupal](/docs/articles/drupal/cron/)  
-- [Drupal's Performance and Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings/)
-- [Setting up CloudFront CDN with Drupal](/docs/articles/drupal/cdn-setting-up-cloudfront/)
+## [Drupal 8](/docs/articles/drupal/8)
+{% for article in data.d8 %}
+<a href="{{ article.url }}">{{ article.title }}</a><br>
+{% endfor %}
+## Drupal
+[Caching in Drupal Modules](/docs/articles/drupal/caching-in-drupal-modules)<br>
+[Setting Up CloudFront CDN with Drupal](/docs/articles/drupal/cdn-setting-up-cloudfront)<br>
+[Configuring JetBrains PhpStorm IDE with Drupal on Pantheon](/docs/articles/drupal/configuring-jetbrains-phpstorm-ide-with-pantheon)<br>
+[Configuring Settings.php](/docs/articles/drupal/configuring-settings-php)<br>
+[Content Delivery Network (CDN) for File Distribution](/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution)<br>
+[Cron for Drupal](/docs/articles/drupal/cron)<br>
+[Drupal on Pantheon](/docs/articles/drupal/drops)<br>
+[Drupal Performance and Varnish Caching Settings](/docs/articles/drupal/drupal-performance-and-caching-settings)
+[Replace Links Referencing IP:PORT in Drupal](/docs/articles/drupal/fix-broken-links-that-reference-ip-port-instead-of-domain-name)<br>
+[Getting the Client IP Address](/docs/articles/drupal/getting-the-client-ip-address)<br>
+[Launch Check - Drupal Performance and Configuration Analysis](/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis)<br>
+[Major Version Drupal Upgrades](/docs/articles/drupal/major-version-drupal-upgrades)<br>
+[Multilingual Best Practices on Pantheon](/docs/articles/drupal/multilingual-best-practices)<br>
+[Optimizing the ImageCache Module in Drupal 6](/docs/articles/drupal/optimizing-the-image-cache-module-in-drupal-6)<br>
+[Private Files](/docs/articles/drupal/private-files)<br>
+[Session and Cookie Handling](/docs/articles/drupal/session-and-cookie-handling)<br>
+[Extracting Sites from a Drupal Multisite](/docs/articles/drupal/unwind-a-multisite)<br>
+[Updating Modules Through Drupal](/docs/articles/drupal/updating-modules-through-drupal)<br>
+[Using SimpleSAMLphp with Shibboleth SSO](/docs/articles/drupal/using-simplesamlphp-with-shibboleth-sso)<br>
