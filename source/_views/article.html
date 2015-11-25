@@ -6,7 +6,7 @@
             <header>
                 <h1 class="pio-docs-title">{{ page.title }}</h1>
                     <!-- Contrib dropdown button CTA Contribute to Docs -->
-                    {% if (page.landing is defined) or (page.sites is defined) %}
+                    {% if (page.landing is defined) or (page.landing_subdirs is defined) %}
                     {% else %}
                     <div class="dropdown" id="contrib-cta-btn">
                         <button class="btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="true"><span class="icon-github"></span> Contribute to Docs<span class="caret"></span></button>
