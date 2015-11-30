@@ -1,4 +1,6 @@
 ---
+use:
+    - varnish
 title: Varnish Caching for High Performance with Drupal and WordPress
 description: Configure and verify Varnish is working on your WordPress or Drupal sites.
 category:
@@ -11,6 +13,23 @@ Varnish is an HTTP accelerator that quickly serves both static content and anony
 Every site on Pantheon already uses Varnish; each HTTP request first goes to the pool of Varnish servers to seamlessly cache your site content. If a current cache isn't found, the request will continue to the application container worker, then the response will be cached on the way back to the browser.  
 
 Varnish can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by Varnish and end-users won't realize anything is wrong.
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          All Varnish Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        {% for article in data.varnish %}
+        <a href="{{ article.url }}">{{ article.title }}</a><br>
+        {% endfor %}
+       </div>
+    </div>
+</div>
+
 
 
 ## Configure Your Drupal or WordPress Site for Varnish

@@ -6,7 +6,7 @@
             <header>
                 <h1 class="pio-docs-title">{{ page.title }}</h1>
                     <!-- Contrib dropdown button CTA Contribute to Docs -->
-                    {% if (page.landing is defined) or (page.landing_subdirs is defined) %}
+                    {% if page.landing_subdirs is defined %}
                     {% else %}
                     <div class="dropdown" id="contrib-cta-btn">
                         <button class="btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="true"><span class="icon-github"></span> Contribute to Docs<span class="caret"></span></button>
@@ -30,12 +30,9 @@
             </div>
         </div>
         <!-- SIDEBAR NAV - Search/TOC -->
-        {% if page.landing is defined %}
-        {% else %}
         <div class="col-md-3">
             {% include ("sidebarnav.html") %}
         </div>
-        {% endif %}
     </div>
 </article>
 {% endblock %}

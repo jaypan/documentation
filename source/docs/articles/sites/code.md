@@ -1,9 +1,27 @@
 ---
+use:
+    - code
 title: Pantheon Dashboard Code Tool
 description: Learn how to work with your site's code on Pantheon's Dashboard code tool.
 keywords: code, commit, sftp, development, how to connect, connection information, wp-admin, admin, administrator, codebase, repository, upstream
 ---
 The Code tool within the Pantheon Dashboard on any environment allows you to interact with your site's code and review the commit log.
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          All Code Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        {% for article in data.code %}
+        <a href="{{ article.url }}">{{ article.title }}</a><br>
+        {% endfor %}
+       </div>
+    </div>
+</div>
 
 ## Navigate the Code Tool
 You can set the site's [connection mode](/docs/articles/getting-started/#interact-with-your-code) and access [connection information](/docs/articles/sites/code/developing-directly-with-sftp-mode/#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.

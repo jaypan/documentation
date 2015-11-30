@@ -1,4 +1,6 @@
 ---
+use:
+    - create
 title: Creating Sites
 description:  How to create a new Drupal or WordPress site on the Pantheon Website Management Platform.
 category:
@@ -6,6 +8,24 @@ category:
 keywords: create a site, creating new sites, how to create a site, creating sites, how to create a site on pantheon, create new site on pantheon, pantheon account
 ---
 On your User Dashboard, click  **Create your first site** or **Create a new site**.
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          All Site Creation Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        {% for article in data.create %}
+        <a href="{{ article.url }}">{{ article.title }}</a><br>
+        {% endfor %}
+       </div>
+    </div>
+</div>
+
+
 ### Name Your Site
 Choose a name for your site. You cannot change the name of a site after creating it. A development URL will be automatically generated for you, at our pantheon.io domain.
 ![Name your site](/source/docs/assets/images/name-your-site.png)

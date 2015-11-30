@@ -1,4 +1,6 @@
 ---
+use:
+  - backups
 title: Backups Tool
 description: Learn about the Backups tool available on the Pantheon Website Management Platform.
 category:
@@ -9,6 +11,24 @@ The Backups tab is where you manage all the details for your site's backup. A ba
 
 We strongly urge you to backup your site regularly.<br />
 ![Backups tab](/source/docs/assets/images/backups-image.png)
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          All Backup Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        {% for article in data.backups %}
+        <a href="{{ article.url }}">{{ article.title }}</a><br>
+        {% endfor %}
+       </div>
+    </div>
+</div>
+
 
 ##Create a Backup
 You can create a new backup and set the timing for how long the backup is kept. This should be set for every environment (Dev, Test, Live). For detailed instructions creating a backup, see [Backup Creation](/docs/articles/sites/backups/backup-creation).

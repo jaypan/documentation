@@ -1,9 +1,28 @@
 ---
+use:
+    - settings
 title: Pantheon Settings Tool
 description: Learn how to change your site's settings on Pantheon Website Management Platform.
 keywords: settings, add credit card, add a card, credit card, select a plan, plan, plan levels, php version, how to change php version, toggle php, php
 ---
 The Settings page allows you to view and manage your site's configurations. This includes the site's service level, billing, add ons, and PHP version.
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          All Settings Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        {% for article in data.settings %}
+        <a href="{{ article.url }}">{{ article.title }}</a><br>
+        {% endfor %}
+       </div>
+    </div>
+</div>
+
 
 ## About Site
 View general information on the site by selecting the **About Site** tab.

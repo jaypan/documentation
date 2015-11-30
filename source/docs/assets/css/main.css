@@ -1437,7 +1437,10 @@ h1[id] {
   background-color: #FE4A45;
   border-color: #FE4A45;
 }
-
+.panel-default>.panel-heading {
+    background-color: #DDE5E7 !important;
+    background-image: none !important;
+}
 .btn-primary, .btn-primary:visited {
   text-shadow: none !important;
   background: #EFD01B;

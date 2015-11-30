@@ -1,4 +1,6 @@
 ---
+use:
+    - newrelic
 title: New Relic
 description: Learn about the New Relic tool in your Pantheon Website Management Platform dashboard
 category:
@@ -8,12 +10,29 @@ keywords: new relic,
 [New Relic](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 Using New Relic on Pantheon not only makes it easy for you to monitor to your performance, but it can also speed-up the support process by helping out support team visualize corresponding performance and symptoms.
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          All New Relic Docs
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        {% for article in data.newrelic %}
+        <a href="{{ article.url }}">{{ article.title }}</a><br>
+        {% endfor %}
+       </div>
+    </div>
+</div>
+
 
 ##Enabling New Relic
 Enable New Relic on your Pantheon site by clicking **Settings** in the upper-right corner of your Site Dashboard. Go to the Add Ons tab, and click **Add** next to New Relic.
-![New Relic Add On](/source/docs/assets/images/new-relic-add-on-image.png) 
+![New Relic Add On](/source/docs/assets/images/new-relic-add-on-image.png)
 
-For two weeks, you'll receive a trial of New Relic's Pro plan for the site. New relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments. 
+For two weeks, you'll receive a trial of New Relic's Pro plan for the site. New relic monitoring is automatically enabled for all application servers added to the site, including Multidev environments.
 
 ## Remove Multidev Environments in New Relic
 After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).  
