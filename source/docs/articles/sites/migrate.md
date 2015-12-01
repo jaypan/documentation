@@ -1,4 +1,6 @@
 ---
+migrate: true
+layout: landing
 use:
     - migrate
 title: Migrate Sites to Pantheon
@@ -10,24 +12,6 @@ keywords: migrate, migrating site, migrate from remote host, migrate existing si
 Migrating a website from another environment is a complex task. Whether it is running locally, on a shared host, or on a cluster of virtual machines at an infrastructure-as-a-service provider, the goal is the same: move to Pantheon and enjoy the freedom to build awesome sites.
 
 Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly.
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Migration Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        {% for article in data.migrate %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-       </div>
-    </div>
-</div>
-
 
 
 ## Pack Up

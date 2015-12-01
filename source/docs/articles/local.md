@@ -1,7 +1,8 @@
 ---
 use: [local]
+local: true
 title: Local Development
-layout: article
+layout: landing
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
 category:
 - getting-started
@@ -10,23 +11,6 @@ keywords: local development, pantheon, develop locally, developing
 While Pantheon provides several options for on-server development, [local development](/docs/articles/local/developing-locally) has a number of advantages, especially if continuous Internet access is a concern. Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. If you're looking for a self-contained local development solution, check out [Kalabox](http://www.kalamuna.com/products/kalabox), which integrates with the Pantheon platform.
 
 For large teams/sites, we recommend using [Multidev](https://pantheon.io/docs/articles/sites/multidev/) instead of local development.
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Local Development Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        {% for article in data.local %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-       </div>
-    </div>
-</div>
 
 ## Before You Begin
 Be sure you have:

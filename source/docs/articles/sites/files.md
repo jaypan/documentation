@@ -1,4 +1,6 @@
 ---
+files: true
+layout: landing
 use:
     - files
 title: Pantheon Filesystem
@@ -13,22 +15,6 @@ Files are user uploads, usually images or documents. They are excluded from vers
 The Pantheon architecture is comprised of highly available [application containers](/docs/articles/sites/all-about-application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
 Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal within the `/files` directory. Any [non-standard file locations](/docs/articles/sites/files/non-standard-files-locations/) should be symbolically linked to `/files` or moved manually.
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Files Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        {% for article in data.files %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-       </div>
-    </div>
-</div>
 
 
 ## Access via SFTP

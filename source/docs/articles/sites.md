@@ -1,4 +1,5 @@
 ---
+sites: true
 use:
   - backups
   - code
@@ -14,7 +15,7 @@ use:
   - varnish
   - sites
 title: The Site Dashboard
-layout: article
+layout: landing
 landing_subdirs: true
 description: Learn how to use the Pantheon Site Dashboard to build and manage your sites.
 category:
@@ -28,90 +29,6 @@ The Site Dashboard is where you can find all the tools you need to successfully 
 At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/docs/articles/sites/multidev/).
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Site Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        <h4><a href="/docs/articles/sites/backups">Backups</a></h4>
-        {% for article in data.backups %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/code">Code</a></h4>
-        {% for article in data.code %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/create">Create</a></h4>
-        {% for article in data.create %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/database">Database</a></h4>
-        {% for article in data.database %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/domains">Domains</a></h4>
-        {% for article in data.domains %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/files">Files</a></h4>
-        {% for article in data.files %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/logs">Logs</a></h4>
-        {% for article in data.logs %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/migrate">Migrate</a></h4>
-        {% for article in data.migrate %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/newrelic">New Relic</a></h4>
-        {% for article in data.newrelic %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/security">Security</a></h4>
-        {% for article in data.security %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/settings">Settings</a></h4>
-        {% for article in data.settings %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4><a href="/docs/articles/sites/varnish">Varnish</a></h4>
-        {% for article in data.varnish %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-        <h4>Miscellaneous</h4>
-        <a href="/docs/articles/sites/all-about-application-containers">All About Application Containers</a><br>
-        <a href="/docs/articles/sites/apache-solr">Apache Solr on Pantheon</a><br>
-        <a href="/docs/articles/sites/cloudflare-cdn-and-dns/">CloudFlare CDN and DNS on Pantheon</a><br>
-        <a href="/docs/articles/sites/date-and-time">Date and Time</a><br>
-        <a href="/docs/articles/sites/debugging-connectivity-issues">Debugging Connectivity Issues</a><br>
-        <a href="/docs/articles/sites/deleting-a-site">Deleting a Site on Pantheon</a><br>
-        <a href="/docs/articles/sites/deploys">The Pantheon Deploy Log</a><br>
-        <a href="/docs/articles/sites/errors-and-server-responses">Errors and Server Responses</a><br>
-        <a href="/docs/articles/sites/external-libraries">External Libraries</a><br>
-        <a href="/docs/articles/sites/mime-types">MIME Types</a><br>
-        <a href="/docs/articles/sites/multidev">Multidev</a><br>
-        <a href="/docs/articles/sites/new-site-owner">New Site Owner FAQs</a><br>
-        <a href="/docs/articles/sites/php-errors-and-exceptions">PHP Errors and Exceptions</a><br>
-        <a href="/docs/articles/sites/platform-considerations">Platform Considerations</a><br>
-        <a href="/docs/articles/sites/redis-as-a-caching-backend">Redis as a Caching Backend</a><br>
-        <a href="/docs/articles/sites/resetting-passwords">Resetting Passwords</a><br>
-        <a href="/docs/articles/sites/secure-phpinfo">Securely working with phpinfo</a><br>
-        <a href="/docs/articles/sites/site-dashboard">Site Dashboard</a><br>
-        <a href="/docs/articles/sites/team-management">Team Management</a><br>
-        <a href="/docs/articles/sites/timeouts">Timeouts on Pantheon</a><br>
-        <a href="/docs/articles/sites/updating-payment-methods">Updating Payment Methods</a><br>
-        <a href="/docs/articles/sites/what-is-apc-and-what-is-it-used-for">What is APC and what is it used for?</a>
-</div>
-</div>
-</div>
 ## Team
 The Team tab allows you to change the site owner; add supporting agencies; and add, manage, and delete users. For more information, see [Team Management](/docs/articles/sites/team-management/).
 

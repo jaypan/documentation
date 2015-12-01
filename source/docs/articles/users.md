@@ -1,7 +1,8 @@
 ---
 use: [users]
+users: true
 title: User Dashboard and Account
-layout: article
+layout: landing
 description: The Pantheon user entity and its relationship to Drupal or WordPress sites, teams, and organizations.
 category:
   - Platform
@@ -9,23 +10,6 @@ category:
 
 Access all of your sites and manage your account information from the User Dashboard.
 ![Site Dashboard](/source/docs/assets/images/pantheon-user-dashboard1.png)
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All User Dashboard Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-      {% for article in data.users %}
-      <a href="{{ article.url }}">{{ article.title }}</a><br>
-      {% endfor %}
-      </div>
-    </div>
-</div>
 
 ###Sites Tab
 Every site you're a team member of is displayed here, along with the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.

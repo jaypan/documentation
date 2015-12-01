@@ -1,4 +1,6 @@
 ---
+layout: landing
+database: true
 use:
     - database
 title: Database Workflow Tool
@@ -11,24 +13,6 @@ Using the Workflow tool, you can overwrite the databases on your site's Dev or T
 ![Workflow Tool](/source/docs/assets/images/interface-workflow-tool.png)
 <div class="alert alert-danger"><h4>Warning</h4>
 Pushing content up to Live should almost never be done to a launched site, as it can overwrite the environment configurations. See <a href="https://pantheon.io/docs/articles/sites/code/using-the-pantheon-workflow/">Using the Pantheon Workflow</a>. </div>
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Database Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        {% for article in data.database %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-       </div>
-    </div>
-</div>
-
 
 ## MySQL Clients
 You can use any number of MySQL clients such as [PHPMyAdmin](/docs/articles/local/using-phpmyadmin-to-locally-administer-a-database/) or [MySQL Workbench](/docs/articles/local/using-mysql-workbench-to-access-a-database/) to  administer your site's database

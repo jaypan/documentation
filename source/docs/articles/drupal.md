@@ -1,4 +1,5 @@
 ---
+drupal: true
 use:
   - eight
   - drupal
@@ -6,49 +7,10 @@ title: Drupal on Pantheon
 description: Drupal is an open source content management platform powering millions of websites and applications.
 category: drupal
 keywords: drupal, sites, pantheon, upstream
-layout: article
-landing_subdirs: true
+layout: landing
 ---
 
 [Drupal](https://www.drupal.org) is an open source content management platform powering millions of websites and applications. It’s built, used, and supported by an active and diverse community of people around the world.
-<br>
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Drupal Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-      <h4><a href="/docs/articles/drupal/8">Drupal 8</a></h4>
-      {% for article in data.eight %}
-      <a href="{{ article.url }}">{{ article.title }}</a><br>
-      {% endfor %}
-      <h4>Drupal</h4>
-      <a href="/docs/articles/drupal/caching-in-drupal-modules">Caching in Drupal Modules</a><br>
-      <a href="/docs/articles/drupal/cdn-setting-up-cloudfront">Setting Up CloudFront CDN with Drupal</a><br>
-      <a href="/docs/articles/drupal/configuring-jetbrains-phpstorm-ide-with-pantheon">Configuring JetBrains PhpStorm IDE with Drupal on Pantheon</a><br>
-      <a href="/docs/articles/drupal/configuring-settings-php">Configuring Settings.php</a><br>
-      <a href="/docs/articles/drupal/content-delivery-network-cdn-for-file-distribution">Content Delivery Network (CDN) for File Distribution</a><br>
-      <a href="/docs/articles/drupal/cron">Cron for Drupal</a><br>
-      <a href="/docs/articles/drupal/drops">Drupal on Pantheon</a><br>
-      <a href="/docs/articles/drupal/drupal-performance-and-caching-settings">Drupal Performance and Varnish Caching Settings</a><br>
-      <a href="/docs/articles/drupal/fix-broken-links-that-reference-ip-port-instead-of-domain-name">Replace Links Referencing IP:PORT in Drupal</a><br>
-      <a href="/docs/articles/drupal/getting-the-client-ip-address">Getting the Client IP Address</a><br>
-      <a href="/docs/articles/drupal/launch-check-drupal-performance-and-configuration-analysis">Launch Check - Drupal Performance and Configuration Analysis</a><br>
-      <a href="/docs/articles/drupal/major-version-drupal-upgrades">Major Version Drupal Upgrades</a><br>
-      <a href="/docs/articles/drupal/multilingual-best-practices">Multilingual Best Practices on Pantheon</a><br>
-      <a href="/docs/articles/drupal/optimizing-the-image-cache-module-in-drupal-6">Optimizing the ImageCache Module in Drupal 6</a><br>
-      <a href="/docs/articles/drupal/private-files">Private Files</a><br>
-      <a href="/docs/articles/drupal/session-and-cookie-handling">Session and Cookie Handling</a><br>
-      <a href="/docs/articles/drupal/unwind-a-multisite">Extracting Sites from a Drupal Multisite</a><br>
-      <a href="/docs/articles/drupal/updating-modules-through-drupal">Updating Modules Through Drupal</a><br>
-      <a href="/docs/articles/drupal/using-simplesamlphp-with-shibboleth-sso">Using SimpleSAMLphp with Shibboleth SSO</a><br>
-    </div>
-  </div>
-  </div>
 
 ## Drupal 8
 Pantheon runs an unmodified core version of Drupal 8. When you create a new Drupal 8 site, it clones the [drops-8](https://github.com/pantheon-systems/drops-8) repository and sets it as the site's upstream, so you can [apply core updates](/docs/articles/sites/code/applying-upstream-updates/) with a single click.

@@ -1,4 +1,6 @@
 ---
+domains: true
+layout: landing
 use:
     - domains
 title: Domains and DNS
@@ -9,24 +11,6 @@ category:
   - going-live
 ---
 Configuring your domain's DNS is required to route traffic to your Pantheon site.
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Domains Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        {% for article in data.domains %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-       </div>
-    </div>
-</div>
-
-
 
 ## Step 1: Determine the URL to Serve From
 

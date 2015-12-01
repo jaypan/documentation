@@ -1,4 +1,6 @@
 ---
+logs: true
+layout: landing
 use:
     - logs
 title: Log Files on Pantheon  
@@ -8,25 +10,6 @@ keywords: log, access log, nginx access log, nginx log, nginx access, nginx erro
 Log files track and record your site's activity which help you find, debug, and isolate current or potential problems on your site.
 
 Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP.
-
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Log Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        {% for article in data.logs %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-       </div>
-    </div>
-</div>
-
-
 
 ## Download Raw Webserver Log Files
 1. Access the site Dashboard and desired environment (Mulidev, Dev, Test, or Live).

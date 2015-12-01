@@ -1,8 +1,8 @@
 ---
+organizations: true
 use: [organizations]
 title: Organizations
-layout: article
-organizations: true
+layout: landing
 description: Detailed information on Pantheon organization types and the features available to them.
 category:
 - managing
@@ -10,22 +10,6 @@ keywords: pantheon, pantheon for agencies, org, organization, org dashboard, cha
 ---
 
 Pantheon Organizations bring together users, sites, custom upstreams, and support tickets; and provide administrators with the tools needed to effectively manage a large number of sites.
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All Organization Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-      {% for article in data.organizations %}
-      <a href="{{ article.url }}">{{ article.title }}</a><br>
-      {% endfor %}
-      </div>
-    </div>
-</div>
 ## Create an Organization
 Current users can create their own Pantheon for Agencies and Pantheon EDU organizations by completing the appropriate form:
 

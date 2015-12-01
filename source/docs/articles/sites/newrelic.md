@@ -1,4 +1,6 @@
 ---
+newrelic: true
+layout: landing
 use:
     - newrelic
 title: New Relic
@@ -10,23 +12,6 @@ keywords: new relic,
 [New Relic](http://newrelic.com) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 Using New Relic on Pantheon not only makes it easy for you to monitor to your performance, but it can also speed-up the support process by helping out support team visualize corresponding performance and symptoms.
-<div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse"  href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          All New Relic Docs
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        {% for article in data.newrelic %}
-        <a href="{{ article.url }}">{{ article.title }}</a><br>
-        {% endfor %}
-       </div>
-    </div>
-</div>
-
 
 ##Enabling New Relic
 Enable New Relic on your Pantheon site by clicking **Settings** in the upper-right corner of your Site Dashboard. Go to the Add Ons tab, and click **Add** next to New Relic.

@@ -1,0 +1,205 @@
+{% extends "default" %}
+{% block content_wrapper %}
+<article>
+    <div class="article container">
+        <div class="col-md-6">
+            <header>
+                <h1 class="pio-docs-title">{{ page.title }}</h1>
+                    <!-- Contrib dropdown button CTA Contribute to Docs -->
+                    <div class="dropdown" id="contrib-cta-btn">
+                        <button class="btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="true"><span class="icon-github"></span> Contribute to Docs<span class="caret"></span></button>
+                            <div class="dropdown-menu edit" aria-labelledby="dropdownMenu1">
+                                <a href="https://github.com/pantheon-systems/documentation/edit/master/source{{ page.url }}.md" target="blank"><span class="glyphicon glyphicon-pencil"></span> Edit This Doc</a><br>
+                                <a href="https://github.com/pantheon-systems/documentation/issues/new?title={{page.title}}%20Doc%20Update%20&body=Re%3A%20%5B{{page.title}}%5D(https%3A%2F%2Fpantheon.io{{page.url}})%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=type%3A%20doc%20update" target="blank"><span class="glyphicon glyphicon-tag"></span> Report Doc Issue</a><br>
+                                <a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=type%3A%20new%20article" target="blank"><span class="glyphicon glyphicon-file"></span> Suggest New Doc</a>
+                            </div>
+                    </div>
+                </header>
+            <!--{% if page.category %}
+            <p class="category">Categories:
+            {% for category in page.category %}
+            <a href="{{ site.url }}/categories/{{ category|url_encode(true) }}">{{ category|title|replace({'-': ' '}) }}</a>{% if not loop.last %}, {% endif %}
+            {% endfor %}</p>
+            {% endif %}-->
+            <!--div class="outline-alert"><strong>Want to improve this doc? Check the <a href="https://github.com/pantheon-systems/documentation/issues?utf8=✓&q=is%3Aissue+{{ page.title }}" target="blank">issues queue</a>, review <a href="https://github.com/pantheon-systems/documentation/blob/master/CONTRIBUTING.md" target="blank">contributor guidelines</a>, and -->
+            <div style="margin-top:15px;">
+                {{ page.blocks.content|raw }}
+            </div>
+        </div>
+        <!-- SIDEBAR NAV - Search/TOC -->
+        <div class="col-md-3">
+            {% include ("sidebarnav.html") %}
+        </div>
+        <div data-spy="affix" data-offset-top="200" class="col-md-3 pio-landing-sidenav hidden-s">
+            {% if page.local is defined %}
+                <h3>All Local Docs</h3>
+                {% for article in data.local %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.drupal is defined %}
+                <h3>All Drupal Docs</h3>
+                {% for article in data.drupal %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.eight is defined %}
+                <h3>All Drupal 8 Docs</h3>
+                {% for article in data.eight %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.organizations is defined %}
+                <h3>All Organization Docs</h3>
+                {% for article in data.organizations %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.users is defined %}
+                <h3>All User Docs</h3>
+                {% for article in data.users %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.wordpress is defined %}
+                <h3>All WordPress Docs</h3>
+                {% for article in data.wordpress %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.sites is defined %}
+                <h3>All Site Docs</h3>
+                <h4><a href="/docs/articles/sites/backups">Backups</a></h4>
+                {% for article in data.backups %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/code">Code</a></h4>
+                {% for article in data.code %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/create">Create</a></h4>
+                {% for article in data.create %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/database">Database</a></h4>
+                {% for article in data.database %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/domains">Domains</a></h4>
+                {% for article in data.domains %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/files">Files</a></h4>
+                {% for article in data.files %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/logs">Logs</a></h4>
+                {% for article in data.logs %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/migrate">Migrate</a></h4>
+                {% for article in data.migrate %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/newrelic">New Relic</a></h4>
+                {% for article in data.newrelic %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/security">Security</a></h4>
+                {% for article in data.security %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/settings">Settings</a></h4>
+                {% for article in data.settings %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4><a href="/docs/articles/sites/varnish">Varnish</a></h4>
+                {% for article in data.varnish %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+                <h4>Miscellaneous</h4>
+                <a href="/docs/articles/sites/all-about-application-containers"><span class="glyphicon glyphicon-file"></span> <span>All About Application Containers</span></a><br>
+                <a href="/docs/articles/sites/apache-solr"><span class="glyphicon glyphicon-file"></span> <span>Apache Solr on Pantheon</span></a><br>
+                <a href="/docs/articles/sites/cloudflare-cdn-and-dns/"><span class="glyphicon glyphicon-file"></span> <span>CloudFlare CDN and DNS on Pantheon</span></a><br>
+                <a href="/docs/articles/sites/date-and-time"><span class="glyphicon glyphicon-file"></span> <span>Date and Time</span></a><br>
+                <a href="/docs/articles/sites/debugging-connectivity-issues"><span class="glyphicon glyphicon-file"></span> <span>Debugging Connectivity Issues</span></a><br>
+                <a href="/docs/articles/sites/deleting-a-site"><span class="glyphicon glyphicon-file"></span> <span>Deleting a Site on Pantheon</span></a><br>
+                <a href="/docs/articles/sites/deploys"><span class="glyphicon glyphicon-file"></span> <span>The Pantheon Deploy Log</span></a><br>
+                <a href="/docs/articles/sites/errors-and-server-responses"><span class="glyphicon glyphicon-file"></span> <span>Errors and Server Responses</span></a><br>
+                <a href="/docs/articles/sites/external-libraries"><span class="glyphicon glyphicon-file"></span> <span>External Libraries</span></a><br>
+                <a href="/docs/articles/sites/mime-types"><span class="glyphicon glyphicon-file"></span> <span>MIME Types</span></a><br>
+                <a href="/docs/articles/sites/multidev"><span class="glyphicon glyphicon-file"></span> <span>Multidev</span></a><br>
+                <a href="/docs/articles/sites/new-site-owner"><span class="glyphicon glyphicon-file"></span> <span>New Site Owner FAQs</span></a><br>
+                <a href="/docs/articles/sites/php-errors-and-exceptions"><span class="glyphicon glyphicon-file"></span> <span>PHP Errors and Exceptions</span></a><br>
+                <a href="/docs/articles/sites/platform-considerations"><span class="glyphicon glyphicon-file"></span> <span>Platform Considerations</span></a><br>
+                <a href="/docs/articles/sites/redis-as-a-caching-backend"><span class="glyphicon glyphicon-file"></span> <span>Redis as a Caching Backend</span></a><br>
+                <a href="/docs/articles/sites/resetting-passwords"><span class="glyphicon glyphicon-file"></span> <span>Resetting Passwords</span></a><br>
+                <a href="/docs/articles/sites/secure-phpinfo"><span class="glyphicon glyphicon-file"></span> <span>Securely working with phpinfo</span></a><br>
+                <a href="/docs/articles/sites/site-dashboard"><span class="glyphicon glyphicon-file"></span> <span>Site Dashboard</span></a><br>
+                <a href="/docs/articles/sites/team-management"><span class="glyphicon glyphicon-file"></span> <span>Team Management</span></a><br>
+                <a href="/docs/articles/sites/timeouts"><span class="glyphicon glyphicon-file"></span> <span>Timeouts on Pantheon</span></a><br>
+                <a href="/docs/articles/sites/updating-payment-methods"><span class="glyphicon glyphicon-file"></span> <span>Updating Payment Methods</span></a><br>
+                <a href="/docs/articles/sites/what-is-apc-and-what-is-it-used-for"><span class="glyphicon glyphicon-file"></span> <span>What is APC and what is it used for?</a>
+            {% elseif page.backups is defined %}
+                <h3>All Backup Docs</h3>
+                {% for article in data.backups %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.code is defined %}
+                <h3>All Code Docs</h3>
+                {% for article in data.code %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.create is defined %}
+                <h3>All Site Creation Docs</h3>
+                {% for article in data.create %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.database is defined %}
+                <h3>All Database Docs</h3>
+                {% for article in data.database %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.domains is defined %}
+                <h3>All Domain Docs</h3>
+                {% for article in data.domains %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.files is defined %}
+                <h3>All Files Docs</h3>
+                {% for article in data.files %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.logs is defined %}
+                <h3>All Log Docs</h3>
+                {% for article in data.logs %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.migrate is defined %}
+                <h3>All Migration Docs</h3>
+                {% for article in data.migrate %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.newrelic is defined %}
+                <h3>All New Relic Docs</h3>
+                {% for article in data.newrelic %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.security is defined %}
+                <h3>All Security Docs</h3>
+                {% for article in data.security %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.settings is defined %}
+                <h3>All Settings Docs</h3>
+                {% for article in data.settings %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+            {% elseif page.varnish is defined %}
+                <h3>All Varnish Docs</h3>
+                {% for article in data.varnish %}
+                <a href="{{ article.url }}"><span class="glyphicon glyphicon-file"></span> <span>{{ article.title }}</span></a><br>
+                {% endfor %}
+
+
+
+            {% else %}
+            {% endif %}
+        </div>
+    </div>
+</article>
+{% endblock %}

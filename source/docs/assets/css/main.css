@@ -891,6 +891,33 @@ img.noborder {
 .pio-docs-sidenav {
   margin-bottom: 20px;
 }
+.pio-landing-sidenav {
+    background-color: #EEF2F3;
+    test-decoration: none;
+    position: fixed;
+    right: 0;
+    display: block;
+    height:100%;
+    padding: 0px 10px 0px 10px;
+}
+.pio-landing-sidenav a {
+color: #44525E;
+text-decoration: none;
+}
+.pio-landing-sidenav span:hover {
+color: #222222;
+}
+
+.pio-landing-sidenav.affix-top {
+    top: 115px;
+}
+.pio-landing-sidenav.affix {
+        top: 50px;
+
+}
+.pio-landing-sidenav.affix-bottom {
+
+}
 
 /* All levels of nav */
 .pio-docs-sidebar .nav > li > a {
@@ -987,16 +1014,16 @@ img.noborder {
 @media (min-width: 1500px){
 .pio-docs-sidebar.affix-bottom {
     width: 250px !important;
-    margin-left: 20px;
+    margin-left: 50px;
 }
     .pio-docs-sidebar.affix-top {
         width: 250px !important;
-        margin-left: 20px;
+        margin-left: 50px;
 
     }
     .pio-docs-sidebar.affix {
         width: 250px !important;
-        margin-left: 20px;
+        margin-left: 50px;
 
 }
 .navbar-nav {
@@ -1004,7 +1031,7 @@ img.noborder {
 
 }
 
-@media (min-width: 1102px) and (max-width: 1499px){
+@media (min-width: 1202px) and (max-width: 1499px){
 .pio-docs-sidebar.affix-bottom {
     width: 250px !important;
     margin-left: 40px;
@@ -1012,7 +1039,6 @@ img.noborder {
     .pio-docs-sidebar.affix-top {
         width: 250px !important;
         margin-left: 40px;
-
     }
     .pio-docs-sidebar.affix {
         width: 250px !important;
@@ -1023,15 +1049,12 @@ img.noborder {
     margin-right: 16px;
 }
 }
-@media (min-width: 992px) and (max-width: 1101px){
+@media (min-width: 992px) and (max-width: 1201px){
 .pio-docs-sidebar.affix-bottom {
-    width: 200px !important;
 }
     .pio-docs-sidebar.affix-top {
-        width: 200px !important;
     }
     .pio-docs-sidebar.affix {
-        width: 200px !important;
 }
 .navbar-nav {
 
@@ -1047,6 +1070,7 @@ margin-right: 20px;
   .pio-docs-sidebar.affix,
   .pio-docs-sidebar.affix-bottom {
       position: fixed;
+      top: 40px;
 
   }
   .pio-docs-sidebar.affix {
@@ -1056,7 +1080,6 @@ margin-right: 20px;
  }
   .pio-docs-sidebar.affix {
     position: fixed; /* Undo the static from mobile first approach */
-    top: 40px;
   }
   .pio-docs-sidebar.affix-top {
   }

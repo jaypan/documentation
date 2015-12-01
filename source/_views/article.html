@@ -6,8 +6,6 @@
             <header>
                 <h1 class="pio-docs-title">{{ page.title }}</h1>
                     <!-- Contrib dropdown button CTA Contribute to Docs -->
-                    {% if page.landing_subdirs is defined %}
-                    {% else %}
                     <div class="dropdown" id="contrib-cta-btn">
                         <button class="btn-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"  aria-expanded="true"><span class="icon-github"></span> Contribute to Docs<span class="caret"></span></button>
                             <div class="dropdown-menu edit" aria-labelledby="dropdownMenu1">
@@ -16,7 +14,6 @@
                                 <a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=type%3A%20new%20article" target="blank"><span class="glyphicon glyphicon-file"></span> Suggest New Doc</a>
                             </div>
                     </div>
-                    {% endif %}
                 </header>
             <!--{% if page.category %}
             <p class="category">Categories:
