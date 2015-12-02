@@ -890,33 +890,28 @@ img.noborder {
 /* First level of nav */
 .pio-docs-sidenav {
   margin-bottom: 20px;
+
 }
 .pio-landing-sidenav {
-    background-color: #EEF2F3;
-    test-decoration: none;
-    position: fixed;
-    right: 0;
-    display: block;
-    height:100%;
-    padding: 0px 10px 0px 10px;
+    margin-left: -15px;
+    margin-right: 15px;
+    height: 100%;
+    padding-left: 30px;
+
+}
+.pio-landing-sidenav ul {
+  padding-left: 9px ;
+  text-indent: -9px ;
+  list-style: none;
+
 }
 .pio-landing-sidenav a {
 color: #44525E;
 text-decoration: none;
+font-size: 13px;
 }
 .pio-landing-sidenav span:hover {
 color: #222222;
-}
-
-.pio-landing-sidenav.affix-top {
-    top: 115px;
-}
-.pio-landing-sidenav.affix {
-        top: 50px;
-
-}
-.pio-landing-sidenav.affix-bottom {
-
 }
 
 /* All levels of nav */
